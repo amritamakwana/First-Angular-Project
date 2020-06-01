@@ -1,0 +1,10 @@
+
+<div class="from group">
+    <h5>Welcome to Posts detail page</h5>
+<ul *ngFor = 'let post of postFromId' appChbgcolor>
+    <li>{{post.userId}}</li>
+    <li >{{post.id}}</li>
+    <li >{{post.body}}</li>
+</ul>
+<button (click) = "onBack()" class="btn btn-primary">Back</button>
+</div>
