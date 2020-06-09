@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { PostsService } from '../service/posts.service';
 import { IPost } from 'src/service/posts';
 import { HttpClientModule } from '@angular/common/http';
+import { StarComponent } from './starComponent/stars.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

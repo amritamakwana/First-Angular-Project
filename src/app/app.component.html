@@ -15,7 +15,7 @@
         </thead>
         <tbody>
         <tr *ngFor = 'let post of filteredList '>
-          <td>{{post.userId}}</td>
+          <td><app-star [rating] = 'post.userId'></app-star></td>
           <td>{{post.id}}</td>
           <td><a [routerLink] = "['/posts', post.id]">{{post.title}}</a></td>
           <td>{{post.body}}</td>

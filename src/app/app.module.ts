@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { PostDetailGuardGuard } from './postDetail/post-detail-guard.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component'
+import { StarComponent } from './starComponent/stars.component';
 
 const routes = [
   { path : 'posts/:id', canActivate : [PostDetailGuardGuard], component : postDetail },
@@ -21,7 +22,7 @@ const routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, postDetail, rootComponent, NotFoundComponent, WelcomePageComponent
+    AppComponent, postDetail, rootComponent, NotFoundComponent, WelcomePageComponent, StarComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, RouterModule.forRoot( routes ), FormsModule
