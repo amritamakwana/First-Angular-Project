@@ -1,10 +1,29 @@
 
 <div class="from group">
     <h5>Welcome to Posts detail page</h5>
-<ul *ngFor = 'let post of postFromId' appChbgcolor>
-    <li>{{post.userId}}</li>
-    <li >{{post.id}}</li>
-    <li >{{post.body}}</li>
-</ul>
-<button (click) = "onBack()" class="btn btn-primary">Back</button>
+    <table *ngFor = 'let post of postFromId' style="margin-left: 10px">
+        <thead>
+            <tr>
+                <th style="min-width: 250px">Field</th>
+                <th>value</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Rating (converted from User Id)</td>
+            <td><app-star [rating] = 'post.userId'></app-star></td>
+        </tr>
+        <tr>
+            <td>User Id</td>
+            <td>{{post.userId}}</td>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>{{post.id}}</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>{{post.body}}</td>
+        </tr>
+    </table>
+    <button (click) = "onBack()" class="btn btn-primary">Back</button>
 </div>

@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PostsService } from '../../service/posts.service';
 import { Observable } from 'rxjs';
+import { StarComponent } from '.././starComponent/stars.component';
 
 @Component({
     selector: 'post-detail',
